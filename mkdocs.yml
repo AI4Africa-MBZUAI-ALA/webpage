@@ -1,0 +1,74 @@
+site_name: AI for Africa Bootcamp 2026
+site_description: Official website for the AI for Africa Bootcamp 2026, a collaboration between African Leadership Academy and MBZUAI.
+site_author: African Leadership Academy and MBZUAI
+site_url: https://ala_ai_for_africa_2026.github.io/
+strict: true
+use_directory_urls: true
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - search.highlight
+    - search.share
+    - toc.follow
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: material/robot-outline
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - About:
+      - Mission: about/mission.md
+      - Partners: about/partners.md
+  - Program:
+      - Overview: program/overview.md
+      - Schedule: program/schedule.md
+      - Curriculum: program/curriculum.md
+  - People:
+      - Mentors: people/mentors.md
+      - Team: people/team.md
+  - Logistics:
+      - Venue: logistics/venue.md
+      - Travel: logistics/travel.md
+      - Accommodation: logistics/accommodation.md
+  - Updates:
+      - News: updates/index.md
+      - 2026 Introduction: updates/2026/intro.md
+  - FAQ: faq.md
