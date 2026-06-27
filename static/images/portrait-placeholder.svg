@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title>Abstract portrait placeholder</title>
+  <desc>Warm neutral and green abstract composition used as a portrait stand-in.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3e9d8"/>
+      <stop offset="100%" stop-color="#dfead7"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f7d32"/>
+      <stop offset="100%" stop-color="#1f5f25"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="720" rx="52" fill="url(#bg)"/>
+  <circle cx="690" cy="210" r="138" fill="#f7f4ec" opacity="0.9"/>
+  <circle cx="690" cy="210" r="92" fill="url(#green)"/>
+  <path d="M320 586c65-156 153-232 258-232s193 76 258 232" fill="#ffffff" opacity="0.84"/>
+  <path d="M327 559c48-90 123-141 251-141s203 51 255 141" fill="#2f7d32" opacity="0.92"/>
+  <rect x="110" y="120" width="182" height="18" rx="9" fill="#8aa773" opacity="0.5"/>
+  <rect x="110" y="152" width="122" height="12" rx="6" fill="#8aa773" opacity="0.38"/>
+  <rect x="110" y="544" width="252" height="14" rx="7" fill="#8aa773" opacity="0.36"/>
+</svg>

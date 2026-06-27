@@ -1,0 +1,26 @@
+{
+  "title": "Program",
+  "intro": "The program is organized as a readable sequence of phases instead of a dense documentation tree.",
+  "phases": [
+    {
+      "title": "Arrival and orientation",
+      "summary": "Welcome, introductions, program setup, and shared expectations."
+    },
+    {
+      "title": "AI foundations",
+      "summary": "Core concepts, practical examples, and hands-on exploration."
+    },
+    {
+      "title": "Responsible innovation",
+      "summary": "Ethics, safety, bias, and the community impact of AI choices."
+    },
+    {
+      "title": "Project work",
+      "summary": "Team-based challenge framing, iteration, and mentor feedback."
+    },
+    {
+      "title": "Showcase",
+      "summary": "Final presentations, reflection, and next-step planning."
+    }
+  ]
+}

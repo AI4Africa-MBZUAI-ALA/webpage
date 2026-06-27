@@ -1,0 +1,20 @@
+[
+  {
+    "date": "2026-06-27",
+    "title": "Homepage refresh published",
+    "tag": "Site update",
+    "summary": "The new landing page now centers the four requested areas: about, program, announcements, and people."
+  },
+  {
+    "date": "2026-06-24",
+    "title": "Program structure locked in",
+    "tag": "Program",
+    "summary": "The schedule is now represented as a concise timeline so mentors can scan the bootcamp flow quickly."
+  },
+  {
+    "date": "2026-06-19",
+    "title": "Content model simplified",
+    "tag": "Maintenance",
+    "summary": "Announcements and bios now live in structured source files so future edits stay low-friction."
+  }
+]

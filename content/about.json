@@ -1,0 +1,11 @@
+{
+  "title": "About",
+  "intro": "The bootcamp is designed to help participants build confidence with AI while keeping responsibility, leadership, and community impact at the center.",
+  "points": [
+    "Build confidence with core AI concepts.",
+    "Connect technical learning to local community needs.",
+    "Practice responsible and ethical decision-making.",
+    "Strengthen leadership, collaboration, and communication."
+  ],
+  "note": "The content model is intentionally small. Most updates should be simple edits to the structured data files, not layout changes."
+}

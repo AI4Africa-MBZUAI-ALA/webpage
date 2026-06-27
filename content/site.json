@@ -1,0 +1,28 @@
+{
+  "title": "AI for Africa Bootcamp 2026",
+  "description": "A polished static site for the AI for Africa Bootcamp 2026, a residential program in Johannesburg run by African Leadership Academy and MBZUAI.",
+  "url": "https://ala_ai_for_africa_2026.github.io/",
+  "nav": [
+    { "label": "About", "href": "#about" },
+    { "label": "Program", "href": "#program" },
+    { "label": "Announcements", "href": "#announcements" },
+    { "label": "Organizers", "href": "#organizers" },
+    { "label": "Keynotes", "href": "#keynote-speakers" }
+  ],
+  "hero": {
+    "eyebrow": "Residential bootcamp · Johannesburg, South Africa",
+    "title": "A focused, human-centered introduction to AI for the next generation of African leaders.",
+    "summary": "This site keeps the program story, schedule, announcements, and people in one clear place so mentors and participants can find what they need quickly.",
+    "ctas": [
+      { "label": "View program", "href": "#program", "emphasis": true },
+      { "label": "Latest updates", "href": "#announcements" }
+    ]
+  },
+  "facts": [
+    { "label": "Duration", "value": "2 weeks" },
+    { "label": "Location", "value": "Johannesburg" },
+    { "label": "Cohort", "value": "~40 students" },
+    { "label": "Partners", "value": "ALA + MBZUAI" }
+  ],
+  "footer": "Built as a small static site. Update the content files, run the build, and publish the generated `site/` folder."
+}

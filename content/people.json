@@ -1,0 +1,33 @@
+{
+  "organizers": [
+    {
+      "name": "African Leadership Academy",
+      "role": "Program coordination",
+      "bio": "Leads the local student experience, residential logistics, and participant support for the Johannesburg cohort."
+    },
+    {
+      "name": "MBZUAI",
+      "role": "Academic coordination",
+      "bio": "Contributes AI expertise, curriculum perspective, and review support for the workshop sequence.",
+      "photo": "/images/portrait-placeholder.svg"
+    },
+    {
+      "name": "Residential operations",
+      "role": "On-site support",
+      "bio": "Keeps the day-to-day experience organized, from access and venue flow to practical participant guidance."
+    }
+  ],
+  "keynotes": [
+    {
+      "name": "Opening keynote speaker",
+      "role": "To be announced",
+      "bio": "The opening keynote will frame the bootcamp around responsible AI, leadership, and real community needs.",
+      "photo": "/images/portrait-placeholder.svg"
+    },
+    {
+      "name": "Closing keynote speaker",
+      "role": "To be announced",
+      "bio": "The closing keynote will reflect on the project work, lessons learned, and what comes next."
+    }
+  ]
+}
