@@ -1,11 +1,17 @@
 {
   "title": "About",
-  "intro": "The bootcamp is designed to help participants build confidence with AI while keeping responsibility, leadership, and community impact at the center.",
-  "points": [
-    "Build confidence with core AI concepts.",
-    "Connect technical learning to local community needs.",
-    "Practice responsible and ethical decision-making.",
-    "Strengthen leadership, collaboration, and communication."
-  ],
-  "note": "The content model is intentionally small. Most updates should be simple edits to the structured data files, not layout changes."
+  "cards": [
+    {
+      "title": "MBZUAI and AI for sustainability",
+      "logo": "/static/images/mbzuai-brand-logo.svg",
+      "logo_alt": "MBZUAI logo",
+      "body": "MBZUAI frames artificial intelligence as a tool for solving real-world problems and advancing sustainable progress. Its research ecosystem spans areas that matter for public good, including agriculture, digital public health, and responsible AI applications."
+    },
+    {
+      "title": "ALA and African society",
+      "logo": "/static/images/ala-logo-horizontal.png",
+      "logo_alt": "African Leadership Academy logo",
+      "body": "African Leadership Academy develops young leaders from across Africa and grounds the bootcamp in values of curiosity, integrity, service, and practical leadership for the communities participants come from."
+    }
+  ]
 }

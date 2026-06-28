@@ -4,25 +4,27 @@
   "url": "https://ala_ai_for_africa_2026.github.io/",
   "nav": [
     { "label": "About", "href": "#about" },
+    { "label": "Keynotes", "href": "#keynotes" },
     { "label": "Program", "href": "#program" },
     { "label": "Announcements", "href": "#announcements" },
-    { "label": "Organizers", "href": "#organizers" },
-    { "label": "Keynotes", "href": "#keynote-speakers" }
+    { "label": "Organizers", "href": "#organizers" }
   ],
   "hero": {
     "eyebrow": "Residential bootcamp · Johannesburg, South Africa",
     "title": "A focused, human-centered introduction to AI for the next generation of African leaders.",
     "summary": "This site keeps the program story, schedule, announcements, and people in one clear place so mentors and participants can find what they need quickly.",
+    "image": "/static/images/hero-ai-sustainability-agriculture.png",
+    "image_alt": "Illustration of AI supporting sustainable agriculture",
     "ctas": [
       { "label": "View program", "href": "#program", "emphasis": true },
-      { "label": "Latest updates", "href": "#announcements" }
+      { "label": "Latest updates", "href": "#announcements" },
+      { "label": "Open program portal", "href": "https://program.ai4africamp.com", "target": "_blank" }
     ]
   },
   "facts": [
     { "label": "Duration", "value": "2 weeks" },
     { "label": "Location", "value": "Johannesburg" },
-    { "label": "Cohort", "value": "~40 students" },
+    { "label": "Cohort", "value": "~30 students" },
     { "label": "Partners", "value": "ALA + MBZUAI" }
-  ],
-  "footer": "Built as a small static site. Update the content files, run the build, and publish the generated `site/` folder."
+  ]
 }

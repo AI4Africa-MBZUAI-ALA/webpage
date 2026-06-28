@@ -1,26 +1,1318 @@
 {
   "title": "Program",
-  "intro": "The program is organized as a readable sequence of phases instead of a dense documentation tree.",
-  "phases": [
+  "conventions": [
     {
-      "title": "Arrival and orientation",
-      "summary": "Welcome, introductions, program setup, and shared expectations."
+      "label": "Leadership / Reflection / Ceremony",
+      "emoji": "🧭",
+      "slug": "leadership"
     },
     {
-      "title": "AI foundations",
-      "summary": "Core concepts, practical examples, and hands-on exploration."
+      "label": "Learn",
+      "emoji": "💡",
+      "slug": "learn"
     },
     {
-      "title": "Responsible innovation",
-      "summary": "Ethics, safety, bias, and the community impact of AI choices."
+      "label": "AI / Coding / Prototype / Build",
+      "emoji": "🤖",
+      "slug": "build"
     },
     {
-      "title": "Project work",
-      "summary": "Team-based challenge framing, iteration, and mentor feedback."
+      "label": "Project Work",
+      "emoji": "🛠️",
+      "slug": "project"
     },
     {
-      "title": "Showcase",
-      "summary": "Final presentations, reflection, and next-step planning."
+      "label": "Ideation / Teamwork / Design",
+      "emoji": "🤝",
+      "slug": "ideation"
+    },
+    {
+      "label": "Keynote / Panel / Immersion Visit",
+      "emoji": "🎤",
+      "slug": "keynote"
+    },
+    {
+      "label": "Flex / Social / Cultural / Rest",
+      "emoji": "🌿",
+      "slug": "flex"
+    },
+    {
+      "label": "Logistics / Arrival / Departures",
+      "emoji": "🧳",
+      "slug": "logistics"
+    },
+    {
+      "label": "Meals",
+      "emoji": "🍽️",
+      "slug": "meals"
+    },
+    {
+      "label": "Snacks",
+      "emoji": "🥨",
+      "slug": "snacks"
+    },
+    {
+      "label": "Curfew",
+      "emoji": "🌙",
+      "slug": "curfew"
+    },
+    {
+      "label": "Check-ins",
+      "emoji": "✅",
+      "slug": "checkins"
+    }
+  ],
+  "days": [
+    {
+      "day": "Day 1",
+      "date": "Sun 28 Jun",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "12:00",
+          "title": "Airport pick-ups, biometrics, room check-in",
+          "location": "ALA Campus",
+          "category": "logistics"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "14:00",
+          "title": "Campus tours",
+          "location": "ALA Campus",
+          "category": "logistics"
+        },
+        {
+          "start": "14:00",
+          "end": "14:30",
+          "title": "Security briefing",
+          "location": "ALA Campus",
+          "category": "logistics"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "ALA Icebreakers: Meet the cohort",
+          "location": "ALA Campus",
+          "category": "leadership"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 2",
+      "date": "Mon 29 Jun",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "10:00",
+          "title": "Introduction and Icebreaker by MBZUAI",
+          "location": "ALA Campus",
+          "category": "leadership"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "AI: What’s All the Hype About?",
+          "location": "Auditorium",
+          "category": "build"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Ready, Set, Code!",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Build Your First AI",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Group activity",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 3",
+      "date": "Tue 30 Jun",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Keynote: Rendani Mbuvha",
+          "location": "Auditorium",
+          "category": "keynote"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "Leadership experiential: Critical thinking / Collaboration",
+          "location": "Auditorium",
+          "category": "leadership"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Your AI Mission Begins",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Meet Your AI Playground",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Group activity",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 4",
+      "date": "Wed 1 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Keynote: Vukosi Marivate",
+          "location": "Auditorium",
+          "category": "keynote"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "Inside Generative AI",
+          "location": "Auditorium",
+          "category": "build"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Can You Spot the Pattern?",
+          "location": "Classrooms",
+          "category": "ideation"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Make Data Tell a Story",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Movie Night",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 5",
+      "date": "Thu 2 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Leadership Experiential: Communication / Listening / Trust building",
+          "location": "Auditorium",
+          "category": "leadership"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "Code Without Limits",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "How AI Actually Learns",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "16:30",
+          "title": "Virtual Keynote: Catherine Nakalembe",
+          "location": "Auditorium",
+          "category": "keynote"
+        },
+        {
+          "start": "16:30",
+          "end": "17:00",
+          "title": "Projects check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Games night",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 6",
+      "date": "Fri 3 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "14:00",
+          "title": "Academic Visit",
+          "location": "ALA Campus",
+          "category": "keynote"
+        },
+        {
+          "start": "14:00",
+          "end": "15:00",
+          "title": "Big Ideas Debrief",
+          "location": "Classrooms",
+          "category": "leadership"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Cool Things We’ve Built",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Group activity",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 7",
+      "date": "Sat 4 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "14:30",
+          "title": "Safari",
+          "location": "ALA Campus",
+          "category": "keynote"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "21:00",
+          "title": "Fun group activity",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 8",
+      "date": "Sun 5 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "12:00",
+          "title": "Laundry / room tidy / Rest",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Rest / Homework",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "21:00",
+          "title": "Fun group activity",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "",
+      "date": "",
+      "blocks": []
+    },
+    {
+      "day": "Day 9",
+      "date": "Mon 6 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Leadership Experiential: Communication / Collaboration",
+          "location": "Auditorium",
+          "category": "leadership"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "Can We Trust AI?",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Projects Work: Teach Your AI",
+          "location": "Classrooms",
+          "category": "project"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Ask Us Anything",
+          "location": "Build Lab",
+          "category": "ideation"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Group activity",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 10",
+      "date": "Tue 7 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "AI Battle Quiz",
+          "location": "Build Lab",
+          "category": "learn"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "Meet AI Agents",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Projects Work: Build Time",
+          "location": "Classrooms",
+          "category": "project"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "AI for Our Planet I",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Talent night",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 11",
+      "date": "Wed 8 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Think Like an AI Scientist",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "11:30",
+          "title": "Keynote: Loubna",
+          "location": "Auditorium",
+          "category": "keynote"
+        },
+        {
+          "start": "11:30",
+          "end": "12:00",
+          "title": "Projects check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Projects Work: Build. Test. Improve",
+          "location": "Classrooms",
+          "category": "project"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "AI for Our Planet II",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Cultural night",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 12",
+      "date": "Thu 9 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "AI Math Made Easy",
+          "location": "Build Lab",
+          "category": "learn"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "AI Is Already Around You",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Projects Work: Tell Your AI Story",
+          "location": "Classrooms",
+          "category": "project"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "AI for Our Planet III",
+          "location": "Build Lab",
+          "category": "build"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Free time",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Group activity",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 13",
+      "date": "Fri 10 Jul",
+      "blocks": [
+        {
+          "start": "07:00",
+          "end": "08:00",
+          "title": "Breakfast",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "08:30",
+          "end": "09:00",
+          "title": "Daily check-in",
+          "location": "Classrooms",
+          "category": "checkins"
+        },
+        {
+          "start": "09:00",
+          "end": "10:00",
+          "title": "Showtime Practice",
+          "location": "Classrooms",
+          "category": "project"
+        },
+        {
+          "start": "10:00",
+          "end": "10:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "10:30",
+          "end": "12:00",
+          "title": "Demo Day: Show the World",
+          "location": "Auditorium",
+          "category": "keynote"
+        },
+        {
+          "start": "12:00",
+          "end": "13:00",
+          "title": "Lunch",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "13:00",
+          "end": "15:00",
+          "title": "Closing ceremony & commitments",
+          "location": "Auditorium",
+          "category": "leadership"
+        },
+        {
+          "start": "15:00",
+          "end": "15:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "15:30",
+          "end": "17:00",
+          "title": "Evening departures",
+          "location": "ALA Campus",
+          "category": "logistics"
+        },
+        {
+          "start": "17:00",
+          "end": "18:00",
+          "title": "Dinner (for those staying)",
+          "location": "ALA Campus",
+          "category": "meals"
+        },
+        {
+          "start": "18:00",
+          "end": "19:00",
+          "title": "Evening departures",
+          "location": "ALA Campus",
+          "category": "logistics"
+        },
+        {
+          "start": "19:00",
+          "end": "21:00",
+          "title": "Group activity (for those staying)",
+          "location": "ALA Campus",
+          "category": "flex"
+        },
+        {
+          "start": "21:00",
+          "end": "21:30",
+          "title": "Snack",
+          "location": "ALA Campus",
+          "category": "snacks"
+        },
+        {
+          "start": "21:30",
+          "end": "22:00",
+          "title": "Curfew",
+          "location": "ALA Campus",
+          "category": "curfew"
+        }
+      ]
+    },
+    {
+      "day": "Day 14",
+      "date": "Sat 11 Jul",
+      "blocks": [
+        {
+          "start": "09:00",
+          "end": "12:00",
+          "title": "All departures",
+          "location": "ALA Campus",
+          "category": "logistics"
+        }
+      ]
     }
   ]
 }

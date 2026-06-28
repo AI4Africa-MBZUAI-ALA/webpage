@@ -3,6 +3,12 @@
   const toggle = document.querySelector("[data-nav-toggle]");
   const links = nav ? Array.from(nav.querySelectorAll("a")) : [];
   const sections = Array.from(document.querySelectorAll("main section[id]"));
+  const programToolbar = document.querySelector("[data-program-toolbar]");
+  const programFilters = programToolbar
+    ? Array.from(programToolbar.querySelectorAll("[data-program-filter]"))
+    : [];
+  const programDays = Array.from(document.querySelectorAll("[data-program-day]"));
+  const programBlocks = Array.from(document.querySelectorAll("[data-program-block]"));
 
   const closeMenu = () => {
     if (!nav || !toggle) return;
@@ -24,6 +30,42 @@
         }
       });
     });
+  }
+
+  if (programFilters.length && programBlocks.length) {
+    let activeCategory = "all";
+
+    const syncProgramFilters = () => {
+      programBlocks.forEach((block) => {
+        const category = block.dataset.programCategory || "";
+        const visible = activeCategory === "all" || activeCategory === category;
+        block.classList.toggle("is-hidden", !visible);
+      });
+
+      programDays.forEach((day) => {
+        const visibleBlock = Array.from(day.querySelectorAll("[data-program-block]")).some(
+          (block) => !block.classList.contains("is-hidden")
+        );
+        day.classList.toggle("is-hidden", !visibleBlock);
+      });
+
+      programFilters.forEach((button) => {
+        const filter = button.dataset.programFilter || "";
+        const pressed = filter === activeCategory;
+        button.setAttribute("aria-pressed", String(pressed));
+        button.classList.toggle("is-active", pressed);
+      });
+    };
+
+    programFilters.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.programFilter || "";
+        activeCategory = filter === "all" || activeCategory === filter ? "all" : filter;
+        syncProgramFilters();
+      });
+    });
+
+    syncProgramFilters();
   }
 
   document.addEventListener("click", (event) => {

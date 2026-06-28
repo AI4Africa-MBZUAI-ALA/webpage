@@ -1,0 +1,72 @@
+ 
+
+
+
+  
+Professor Souhaib Ben Taieb 
+Souhaib Ben Taieb is an Associate Professor and Associate Department Chair of Statistics and Data Science at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI) in Abu Dhabi, United Arab Emirates. Before joining MBZUAI, he held faculty positions as a Lecturer in the Department of Econometrics and Business Statistics at Monash University in Melbourne, Australia, and as an Associate Professor in the Department of Computer Science at the University of Mons, Belgium. He also completed a postdoctoral research fellowship with the Spatio-Temporal Statistics and Data Science group at KAUST in Saudi Arabia. Souhaib earned his Ph.D. in Computer Science (Machine Learning) from Université libre de Bruxelles, Belgium, where he also completed his B.Sc. and M.Sc. in Computer Science. He is a recipient of the Doctoral Research Fellowship from the Belgian National Fund for Scientific Research (FNRS) and the Solvay Award for Best Ph.D. Thesis. His research is supported by multiple competitive grants and has been conducted in collaboration with industry partners including Huawei and John Cockrell. At MBZUAI, he leads the AIM for Scale – AI for Weather Forecasting project, which advances AI-based weather forecasting models and supports their operational deployment in low- and middle-income countries. Souhaib is an Associate Editor for the International Journal of Forecasting and an Area Chair for leading machine learning conferences including NeurIPS, ICML, and AISTATS. He was recognized as a Top Reviewer at ICML and regularly reviews for top-tier journals in machine learning and statistics. He was Local Chair for AISTATS 2026 in Tangier, Morocco. 
+ 
+ 
+ 
+  
+Professor Salman Khan 
+Associate Professor of Computer Vision 
+ 
+Professor Salman Khan is an Associate Professor at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), where he leads large-scale initiatives at the intersection of artificial intelligence, climate resilience, and Earth observation. Before joining MBZUAI, he served as a Senior Scientist at the Inception Institute and as a Research Scientist at Data61/CSIRO and received his PhD from The University of Western Australia. His work focuses on building generalizable and scalable AI systems that operate reliably in open-world settings. He works on vision-language models, lifelong and continual learning, and geospatial AI, translating advances in machine learning into real-world applications in climate science, sustainable agriculture, and environmental monitoring. He has authored over 200 publications in leading venues such as CVPR, ICCV, NeurIPS, ICML, ICLR, TPAMI, and IJCV, and regularly serves as Area Chair and senior program committee member at major AI conferences. His research has received multiple recognitions, including a CVPR Best Paper nomination, ACCV Best Student Paper Honorable Mention, and the ICML TerraBytes Best Paper Award. 
+ 
+  
+Lily U Burns, MA, MSc 
+Lily Burns, originally from Rhode Island, USA, is a Senior Advisor for the Undergraduate Program at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), a university in Abu Dhabi focused entirely on AI research and education. With over 25 years of experience in higher education, she helps build the university's partnerships and programs around the world.  
+Before joining MBZUAI, Lily spent more than 11 years at New York University Abu Dhabi (NYUAD), where she oversaw campus operations, security, and health and safety - including leading the university through the COVID-19 pandemic. Prior to that, she spent a decade at MIT, working with faculty on curriculum, policy, and a joint program between MIT and Harvard Medical School in health sciences. Lily started her career at Harvard Business School and holds two graduate degrees - a Master's in Intercultural Relations and an MSc in International Business Administration. Her work spans operations, crisis management, policy and governance, academic strategy, and international partnerships, with a particular focus on connecting students and institutions on an international level. Lily is also an avid cook, personal trainer, photographer, and mother to a 12-year-old daughter. 
+ 
+  
+I’m Mohammed Irfan, a PhD student at MBZUAI, working on personalized AI and wearable technologies. In simple terms, I’m interested in how AI can learn from devices like smartwatches, smart glasses, and sensors to better understand and support people in their daily lives. 
+ 
+I believe that AI is not just for “tech geniuses” or people who spend all day coding. AI can also be creative, human-centered, and useful for solving problems in health, education, sports, daily routines, and many other areas. 
+ 
+When I’m not thinking about AI, I enjoy cooking, sketching, DIY projects, and sometimes breaking things apart and building them back just to figure out how they work. 
+ 
+At the ALA workshop, I’m excited to meet students, hear their ideas, and help make AI feel more approachable, fun, and connected to the real world. 
+  
+ 
+ 
+  
+ 
+Akbobek Abilkaiyrkyzy is a Project Manager at the Mohamed bin Zayed University of Artificial Intelligence, where she leads global AI and climate initiatives exploring how technology can strengthen climate resilience, sustainability, and agricultural decision-making. With experience across data science, machine learning, energy transition, logistics, and industrial automation, she brings a multidisciplinary perspective on how AI can move from research into real-world impact. She holds an MSc in Machine Learning from MBZUAI and a BSc in Automation and Control, and contributes to global leadership and innovation communities through WiSER, the World Economic Forum’s Global Shapers, AI for Good, and the MBZUAI Alumni Board. Akbobek is passionate about bold ideas, responsible AI, and helping young people see technology not just as a tool, but as a way to shape the future. Outside of work, you might find her singing, dancing, playing padel, or exploring new places. 
+ 
+  
+ 
+Bilal Ashfaq is currently pursuing a Master's degree in Statistics and Data Science at Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), where he researches AI agent security and adaptive defense mechanisms. He is also an MBZUAI Student Ambassador and is passionate about advancing the responsible development and application of AI. 
+
+Prior to MBZUAI, Bilal spent over five years as a software engineer, designing and building scalable products and AI-powered solutions across healthcare, retail, logistics, staffing, and enterprise domains. His work spans machine learning applications, data-driven systems, and intelligent software platforms that support real-world decision-making and solve complex challenges. 
+ 
+Beyond his technical work, Bilal is passionate about mentorship and talent development. He has led engineering teams, mentored early-career software engineers, and served as both a teaching assistant and technical instructor. Through the AI for Africa Program, he is excited to support aspiring AI practitioners and leaders in leveraging AI to create meaningful impact across Africa. 
+ 
+ 
+ 
+  
+Nicolas Mauricio Cuadrado Avila  
+Nicolas is a Ph.D. candidate in Machine Learning at the Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), Abu Dhabi, United Arab Emirates. He received the B.Sc. degree in Electronics Engineering from Universidad Nacional de Colombia and the M.Sc. degree in Machine Learning from MBZUAI. His research interests include efficient machine learning, model pruning and compression, reinforcement learning, and AI for sustainable energy systems. He won the GovTech Prize at the World Government Summit in 2018 for the project "Cycle.'' He has served as a Teaching Assistant at MBZUAI and as a reviewer for ICLR, NeurIPS, AISTATS, and ICML. 
+ 
+  
+
+Aya Laajil is a Research Engineer in the Statistics and Data Science Department at Mohamed bin Zayed University of Artificial Intelligence (MBZUAI). She is part of the research team on the AIM For Scale project, where she works on AI-driven weather forecasting for Africa. Her research lies at the intersection of Machine Learning, Probabilistic Calibration, and Applied Statistics. 
+
+Originally from Morocco, Aya followed the highly competitive Classes Préparatoires aux Grandes Écoles (CPGE) pathway before joining CentraleSupélec, where she completed an Engineering degree in Applied Mathematics, followed by a Master's in Mathematics, Vision and Learning (MVA) at École Normale Supérieure (ENS) Paris-Saclay. She earned the prestigious Ibn Rochd Foundation Scholarship, awarded to outstanding Moroccan students admitted to France's top engineering schools. 
+
+Throughout her career, Aya has contributed to projects involving Large Language Models and generative models at CentraleSupélec, as well as deep learning models for electricity markets at Mila, the Quebec Artificial Intelligence Institute in Montreal. Her work has led to publications and presentations at leading venues including NeurIPS, AAAI, and AISTATS. 
+
+Aya is drawn to problems where artificial intelligence serves science and where statistical rigor meets real deployment, making model predictions reliable enough to inform critical decisions. She is committed to bridging rigorous research with real-world impact, and to sharing knowledge across the Global AI community to help shape where the field goes next. In 2024, she served as the Women@BCG representative for BCG X at CentraleSupélec in Paris. Between 2024 and 2026, she participated in AI Research Programs and Workshops across France, Canada, US, and UAE. 
+
+
+
+ 
+
+Nokhutula  Madekufamba is a Master’s student in Big Data Science at the University of Pretoria and a Mastercard Foundation Scholar, holding a cum laude Honours degree in Bioinformatics and Computational Science. She is passionate about applying data science, machine learning, and artificial intelligence to solve real-world problems and transform data into meaningful insights. Her interests span data analytics, predictive modelling, business intelligence, and the responsible use of AI across industries. With a multidisciplinary background in biological sciences and computing, she explores how technology can drive innovation and improve decision-making. Professionally, she has worked as a Junior Information Specialist, supporting data and information management processes, improving data accessibility, and contributing to structured reporting and knowledge organisation. She has also served as a Physics and Chemistry tutor for undergraduate students at the University of Pretoria, helping them strengthen their conceptual understanding and problem-solving skills in foundational science modules. Outside of her academic and professional work, Nokhutula enjoys playing tennis, hiking, mentoring students, and spending time in nature. She is driven by curiosity, continuous learning, and a desire to use technology to create positive social and economic impact.
+
+ 
+
+Caivil Ndobela holds a Master's degree in Bioinformatics from the University of Pretoria, funded through the Mastercard scholarship programme, having earlier received a distinction in his Honours year in the same field. He brings several years of research experience, having participated in more than four international conferences as well as numerous national ones, and was awarded Best Research Poster Presentation at one such event.
+Alongside his research, Caivil has taken on significant leadership and mentorship roles. As President of the South African Society for Bioinformatics, he organised and delivered data analysis training and workshops for researchers across South Africa and other African countries, including Madagascar and Nigeria, strengthening research capacity throughout the region. He has further demonstrated event leadership by chairing both an international symposium in Cape Town and a national symposium in Gqeberha, South Africa.
+Professionally, he has spent over three years at the University of Pretoria as a Junior Information Specialist, supporting postgraduate students in research methodology and data analysis. In this role he has facilitated Python and R programming workshops, developed educational and training materials, and provided editorial support for theses and dissertations. He has also tutored over seven modules at the university.
+

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import html
 import shutil
+import re
 from datetime import date
 from pathlib import Path
 
@@ -12,6 +13,7 @@ OUT_DIR = ROOT / "site"
 SRC_DIR = ROOT / "src"
 STATIC_DIR = ROOT / "static"
 CONTENT_DIR = ROOT / "content"
+ASSET_VERSION = date.today().isoformat()
 
 
 def load_json(filename: str):
@@ -21,9 +23,10 @@ def load_json(filename: str):
 
 site = load_json("site.json")
 about = load_json("about.json")
+keynotes = load_json("keynotes.json")
 program = load_json("program.json")
 announcements = load_json("announcements.json")
-people = load_json("people.json")
+organizers = load_json("organizers.json")
 
 
 def format_date(value: str) -> str:
@@ -35,15 +38,36 @@ def escape(value: object) -> str:
     return html.escape(str(value), quote=True)
 
 
+def render_button(cta: dict) -> str:
+    classes = "button button-primary" if cta.get("emphasis") else "button button-secondary"
+    attrs = []
+    target = cta.get("target")
+    rel = cta.get("rel")
+    if target:
+        attrs.append(f'target="{escape(target)}"')
+        if target == "_blank" and not rel:
+            attrs.append('rel="noopener noreferrer"')
+    if rel:
+        attrs.append(f'rel="{escape(rel)}"')
+    attr_text = f" {' '.join(attrs)}" if attrs else ""
+    return f'<a class="{classes}" href="{escape(cta["href"])}"{attr_text}>{escape(cta["label"])}</a>'
+
+
 def resolve_asset_path(value: str) -> str:
     if value.startswith(("http://", "https://", "//")):
         return value
+    if value.startswith("/static/images/"):
+        return "./images/" + value.rsplit("/", 1)[-1]
     return "." + value if value.startswith("/") else value
 
 
 def initials(name: str) -> str:
     parts = [part for part in name.split() if part]
     return "".join(part[0].upper() for part in parts[:2])
+
+
+def slugify(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
 
 
 def render_facts() -> str:
@@ -60,42 +84,116 @@ def render_facts() -> str:
 
 
 def render_about() -> str:
-    points = "".join(f"<li>{escape(point)}</li>" for point in about["points"])
+    cards = []
+    for card in about["cards"]:
+        logo = ""
+        if card.get("logo"):
+            logo = f"""
+        <div class="about-card-brand">
+          <img src="{escape(resolve_asset_path(card['logo']))}" alt="{escape(card.get('logo_alt', card['title']))}" loading="lazy">
+        </div>"""
+        cards.append(
+            f"""
+      <article class="card about-card">
+        {logo}
+        <h3 class="card-title">{escape(card['title'])}</h3>
+        <p class="muted">{escape(card['body'])}</p>
+      </article>"""
+        )
     return f"""
   <section class="section" id="about">
     <div class="section-header">
       <div>
         <h2 class="section-title">{escape(about['title'])}</h2>
       </div>
-      <p class="section-summary">{escape(about['intro'])}</p>
     </div>
     <div class="content-grid">
-      <article class="card">
-        <h3 class="card-title">What the bootcamp emphasizes</h3>
-        <ul class="list">
-          {points}
-        </ul>
-      </article>
-      <article class="card">
-        <h3 class="card-title">Maintenance model</h3>
-        <p class="muted">{escape(about['note'])}</p>
-      </article>
+      {''.join(cards)}
+    </div>
+  </section>"""
+
+
+def render_keynotes() -> str:
+    cards = "".join(
+        f"""
+      <article class="card keynote-card">
+        <div class="keynote-meta">
+          <span>{escape(item['day'])}</span>
+          <span>{escape(item['date'])}</span>
+        </div>
+        <h3 class="card-title">{escape(item['name'])}</h3>
+        <p class="muted">{escape(item['summary'])}</p>
+        <div class="keynote-location">{escape(item['location'])}</div>
+      </article>"""
+        for item in keynotes
+    )
+
+    return f"""
+  <section class="section" id="keynotes">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Keynotes</h2>
+      </div>
+    </div>
+    <div class="keynote-grid">
+      {cards}
     </div>
   </section>"""
 
 
 def render_program() -> str:
-    items = []
-    for index, phase in enumerate(program["phases"], start=1):
-        items.append(
+    convention_by_slug = {
+        item["slug"]: item
+        for item in program.get("conventions", [])
+        if item.get("slug")
+    }
+
+    filter_buttons = [
+        """
+        <button class="program-filter is-active" type="button" data-program-filter="all" aria-pressed="true">
+          All
+        </button>"""
+    ]
+    for item in program.get("conventions", []):
+        slug = item.get("slug") or slugify(item["label"])
+        filter_buttons.append(
             f"""
-            <article class="timeline-item">
-              <div class="timeline-step">{index:02d}</div>
-              <div>
-                <h3 class="card-title">{escape(phase['title'])}</h3>
-                <p>{escape(phase['summary'])}</p>
+        <button class="program-filter" type="button" data-program-filter="{escape(slug)}" aria-pressed="false">
+          <span aria-hidden="true">{escape(item['emoji'])}</span>
+          <span>{escape(item['label'])}</span>
+        </button>"""
+        )
+
+    days = []
+    for item in program["days"]:
+        blocks = "".join(
+            f"""
+            <li class="program-block" data-program-block data-program-category="{escape(block['category'])}">
+              <div class="program-time">{escape(block['start'])}–{escape(block['end'])}</div>
+              <div class="program-block-copy">
+                <div class="program-block-title">
+                  <span class="program-block-emoji" aria-hidden="true">{escape(convention_by_slug.get(block['category'], {}).get('emoji', '•'))}</span>
+                  <strong>{escape(block['title'])}</strong>
+                </div>
+                <span>{escape(block['location'])}</span>
               </div>
-            </article>"""
+            </li>"""
+            for block in item["blocks"]
+        )
+        days.append(
+            f"""
+      <article class="card program-day" data-program-day>
+        <div class="program-day-head">
+          <div>
+            <div class="schedule-day-label">{escape(item['day'])}</div>
+            <h3 class="card-title">{escape(item['date'])}</h3>
+          </div>
+          <div class="program-day-range">07:00-22:00</div>
+        </div>
+        <ul class="program-list">
+          {blocks}
+        </ul>
+      </article>"""
         )
     return f"""
   <section class="section" id="program">
@@ -103,10 +201,17 @@ def render_program() -> str:
       <div>
         <h2 class="section-title">{escape(program['title'])}</h2>
       </div>
-      <p class="section-summary">{escape(program['intro'])}</p>
     </div>
-    <div class="timeline panel">
-      {''.join(items)}
+    <div class="program-toolbar" data-program-toolbar>
+      <div class="program-conventions-title">Filter by convention</div>
+      <div class="program-filters">
+        {''.join(filter_buttons)}
+      </div>
+    </div>
+    <div class="program-scroll">
+      <div class="program-strip">
+      {''.join(days)}
+      </div>
     </div>
   </section>"""
 
@@ -143,7 +248,6 @@ def render_announcements() -> str:
       <div>
         <h2 class="section-title">Announcements</h2>
       </div>
-      <p class="section-summary">Recent updates are shown in reverse chronological order so the latest note is always first.</p>
     </div>
     {body}
   </section>"""
@@ -167,11 +271,14 @@ def render_person_card(person: dict) -> str:
     </article>"""
 
 
-def render_people_group(title: str, items: list[dict], summary: str) -> str:
+def render_people_group(title: str, items: list[dict]) -> str:
     section_id = title.lower().replace(" ", "-")
     if items:
         cards = "".join(render_person_card(person) for person in items)
-        body = f'<div class="people-grid">{cards}</div>'
+        body = f"""
+    <div class="people-scroll" aria-label="{escape(title)} carousel">
+      <div class="people-strip">{cards}</div>
+    </div>"""
     else:
         body = f'<div class="empty-state">No {escape(title.lower())} have been added yet.</div>'
 
@@ -181,7 +288,6 @@ def render_people_group(title: str, items: list[dict], summary: str) -> str:
       <div>
         <h2 class="section-title">{escape(title)}</h2>
       </div>
-      <p class="section-summary">{escape(summary)}</p>
     </div>
     {body}
   </section>"""
@@ -205,8 +311,8 @@ def page_shell(title: str, body: str) -> str:
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/site.css">
-    <script defer src="./assets/site.js"></script>
+    <link rel="stylesheet" href="./assets/site.css?v={ASSET_VERSION}">
+    <script defer src="./assets/site.js?v={ASSET_VERSION}"></script>
   </head>
   <body>
     <a class="skip-link" href="#content">Skip to content</a>
@@ -236,8 +342,7 @@ def page_shell(title: str, body: str) -> str:
     <footer class="site-footer">
       <div class="container">
         <div class="panel footer-card">
-          <p>{escape(site['footer'])}</p>
-          <a href="#top">Back to top</a>
+          <a class="button button-secondary" href="#top">Back to top</a>
         </div>
       </div>
     </footer>
@@ -246,37 +351,30 @@ def page_shell(title: str, body: str) -> str:
 
 
 def render_home() -> str:
-    hero_ctas = "".join(
-        f'<a class="button {"button-primary" if cta.get("emphasis") else "button-secondary"}" href="{escape(cta["href"])}">{escape(cta["label"])}</a>'
-        for cta in site["hero"]["ctas"]
-    )
-    hero_meta = "".join(
-        f"""
-                <div class="hero-meta-card">
-                  <strong>{escape(fact['value'])}</strong>
-                  <p>{escape(fact['label'])}</p>
-                </div>"""
-        for fact in site["facts"][:2]
-    )
+    hero_ctas = "".join(render_button(cta) for cta in site["hero"]["ctas"])
+    hero_image = site["hero"].get("image")
+    hero_image_alt = site["hero"].get("image_alt", site["hero"]["title"])
+    hero_art = ""
+    if hero_image:
+        hero_art = f"""
+          <figure class="hero-art">
+            <img src="{escape(resolve_asset_path(hero_image))}" alt="{escape(hero_image_alt)}" loading="eager" fetchpriority="high">
+          </figure>"""
     body = f"""
     <div id="top"></div>
     <section class="hero">
       <div class="container hero-grid">
         <article class="panel hero-copy">
-          <div class="eyebrow">{escape(site['hero']['eyebrow'])}</div>
-          <h1>{escape(site['hero']['title'])}</h1>
-          <p class="hero-summary">{escape(site['hero']['summary'])}</p>
-          <div class="hero-actions">
-            {hero_ctas}
+          <div class="hero-copy-main">
+            <div class="eyebrow">{escape(site['hero']['eyebrow'])}</div>
+            <h1>{escape(site['hero']['title'])}</h1>
+            <p class="hero-summary">{escape(site['hero']['summary'])}</p>
+            <div class="hero-actions">
+              {hero_ctas}
+            </div>
           </div>
+          {hero_art}
         </article>
-        <aside class="panel hero-meta" aria-label="Quick facts">
-          {hero_meta}
-          <div class="hero-meta-card">
-            <strong>Program story</strong>
-            <p>Responsible AI, leadership, and project work in a residential format.</p>
-          </div>
-        </aside>
       </div>
     </section>
     <section class="facts">
@@ -288,17 +386,12 @@ def render_home() -> str:
     </section>
     <div class="container">
       {render_about()}
+      {render_keynotes()}
       {render_program()}
       {render_announcements()}
       {render_people_group(
           "Organizers",
-          people["organizers"],
-          "Organizing roles are shown as structured cards so new names or photos can be added without changing the page layout.",
-      )}
-      {render_people_group(
-          "Keynote speakers",
-          people["keynotes"],
-          "Keynote slots stay visible even before final speaker details are confirmed.",
+          organizers,
       )}
     </div>"""
     return page_shell(site["title"], body)
@@ -326,10 +419,9 @@ def copy_static_assets() -> None:
     shutil.copy2(SRC_DIR / "site.css", OUT_DIR / "assets" / "site.css")
     shutil.copy2(SRC_DIR / "site.js", OUT_DIR / "assets" / "site.js")
     shutil.copy2(STATIC_DIR / "favicon.svg", OUT_DIR / "favicon.svg")
-    shutil.copy2(
-        STATIC_DIR / "images" / "portrait-placeholder.svg",
-        OUT_DIR / "images" / "portrait-placeholder.svg",
-    )
+    for image in (STATIC_DIR / "images").iterdir():
+        if image.is_file():
+            shutil.copy2(image, OUT_DIR / "images" / image.name)
 
 
 def main() -> None:
