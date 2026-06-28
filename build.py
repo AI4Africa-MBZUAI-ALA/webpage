@@ -96,9 +96,12 @@ def render_about() -> str:
     for card in about["cards"]:
         logo = ""
         if card.get("logo"):
+            logo_img = f'<img src="{escape(resolve_asset_path(card["logo"]))}" alt="{escape(card.get("logo_alt", card["title"]))}" loading="lazy">'
+            if card.get("href"):
+                logo_img = f'<a class="about-card-logo-link" href="{escape(card["href"])}" target="_blank" rel="noopener noreferrer">{logo_img}</a>'
             logo = f"""
         <div class="about-card-brand">
-          <img src="{escape(resolve_asset_path(card['logo']))}" alt="{escape(card.get('logo_alt', card['title']))}" loading="lazy">
+          {logo_img}
         </div>"""
         cards.append(
             f"""

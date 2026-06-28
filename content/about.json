@@ -6,12 +6,14 @@
       "title": "MBZUAI and AI for sustainability",
       "logo": "/static/images/mbzuai-brand-logo.svg",
       "logo_alt": "MBZUAI logo",
+      "href": "https://mbzuai.ac.ae/",
       "body": "MBZUAI frames artificial intelligence as a tool for solving real-world problems and advancing sustainable progress. Its research ecosystem spans areas that matter for public good, including agriculture, digital public health, and responsible AI applications."
     },
     {
       "title": "ALA and African society",
       "logo": "/static/images/ala-logo-horizontal.png",
       "logo_alt": "African Leadership Academy logo",
+      "href": "https://www.africanleadershipacademy.org/",
       "body": "African Leadership Academy develops young leaders from across Africa and grounds the bootcamp in values of curiosity, integrity, service, and practical leadership for the communities participants come from."
     }
   ]

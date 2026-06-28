@@ -464,6 +464,7 @@ button {
 }
 
 .program-scroll {
+  margin-top: 1rem;
   overflow-x: auto;
   padding-bottom: 0.5rem;
   scroll-snap-type: x proximity;
@@ -700,6 +701,25 @@ button {
   display: flex;
   align-items: center;
   min-height: 3.3rem;
+}
+
+.about-card-logo-link {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 12px;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.about-card-logo-link:hover {
+  transform: translateY(-1px);
+}
+
+.about-card-logo-link:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
 }
 
 .about-card-brand img {
@@ -1041,6 +1061,8 @@ button {
   }
 
   .brand {
+    flex-direction: column;
+    align-items: flex-start;
     gap: 0.55rem;
   }
 
