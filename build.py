@@ -91,6 +91,7 @@ def render_facts() -> str:
 
 
 def render_about() -> str:
+    intro = about.get("intro")
     cards = []
     for card in about["cards"]:
         logo = ""
@@ -115,6 +116,9 @@ def render_about() -> str:
       </div>
     </div>
     <div class="content-grid">
+      <article class="card about-intro">
+        <p>{escape(intro)}</p>
+      </article>
       {''.join(cards)}
     </div>
   </section>"""
@@ -220,6 +224,7 @@ def render_program() -> str:
       {''.join(days)}
       </div>
     </div>
+    <div class="program-note" role="note">{escape(program.get('disclaimer', 'Program timings are subject to change.'))}</div>
   </section>"""
 
 
@@ -335,14 +340,16 @@ def page_shell(title: str, body: str) -> str:
     <link rel="stylesheet" href="./assets/site.css?v={ASSET_VERSION}">
     <script defer src="./assets/site.js?v={ASSET_VERSION}"></script>
   </head>
-  <body>
+    <body>
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="#top" aria-label="{escape(site['title'])}">
-          <span class="brand-mark">AI</span>
+          <span class="brand-logos" aria-hidden="true">
+            <img src="{escape(resolve_asset_path('/static/images/mbzuai-brand-logo.svg'))}" alt="">
+            <img src="{escape(resolve_asset_path('/static/images/ala-logo-horizontal.png'))}" alt="">
+          </span>
           <span class="brand-text">
-            <span class="brand-eyebrow">ALA x MBZUAI</span>
             <span class="brand-title">{escape(site['title'])}</span>
           </span>
         </a>
