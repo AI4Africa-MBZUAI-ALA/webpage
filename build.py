@@ -50,7 +50,14 @@ def render_button(cta: dict) -> str:
     if rel:
         attrs.append(f'rel="{escape(rel)}"')
     attr_text = f" {' '.join(attrs)}" if attrs else ""
-    return f'<a class="{classes}" href="{escape(cta["href"])}"{attr_text}>{escape(cta["label"])}</a>'
+    icon = ""
+    if cta.get("icon") == "computer":
+        icon = """
+        <svg class="button-icon" aria-hidden="true" viewBox="0 0 24 24" focusable="false">
+          <rect x="4" y="5" width="16" height="11" rx="2"></rect>
+          <path d="M8 19h8M10 16l-1 3M14 16l1 3"></path>
+        </svg>"""
+    return f'<a class="{classes}" href="{escape(cta["href"])}"{attr_text}>{icon}{escape(cta["label"])}</a>'
 
 
 def resolve_asset_path(value: str) -> str:
@@ -255,16 +262,30 @@ def render_announcements() -> str:
 
 def render_person_card(person: dict) -> str:
     photo = person.get("photo")
+    role_title = person.get("role_title") or person.get("role") or ""
     if photo:
         media = f'<img src="{escape(resolve_asset_path(photo))}" alt="{escape(person["name"])} portrait">'
     else:
-        media = f'<div class="person-fallback" aria-hidden="true">{escape(initials(person["name"] or person["role"]))}</div>'
+        media = f'<div class="person-fallback" aria-hidden="true">{escape(initials(person["name"] or role_title))}</div>'
+
+    institution = person.get("institution")
+    if institution:
+        role = f"""
+        <div class="role">
+          <span class="role-title">{escape(role_title)}</span>
+          <span class="role-org">{escape(institution)}</span>
+        </div>"""
+    else:
+        role = f"""
+        <div class="role">
+          <span class="role-title">{escape(role_title)}</span>
+        </div>"""
 
     return f"""
     <article class="card person">
       <div class="person-media">{media}</div>
       <div class="person-body">
-        <div class="role">{escape(person['role'])}</div>
+        {role}
         <h3>{escape(person['name'])}</h3>
         <p>{escape(person['bio'])}</p>
       </div>

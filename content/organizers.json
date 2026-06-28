@@ -1,62 +1,72 @@
 [
   {
     "name": "Souhaib Ben Taieb",
-    "role": "Associate Professor, MBZUAI",
-    "bio": "Associate Professor and Associate Department Chair of Statistics and Data Science at MBZUAI. He leads the AIM for Scale AI for Weather Forecasting project and works on AI for operational weather prediction in low- and middle-income countries.",
+    "role_title": "Associate Professor",
+    "institution": "MBZUAI",
+    "bio": "Associate Professor and Associate Department Chair at MBZUAI focused on AI for weather forecasting and climate resilience.",
     "photo": "/static/images/souhaib_ben_taieb.jpeg"
   },
   {
     "name": "Salman Khan",
-    "role": "Associate Professor, MBZUAI",
-    "bio": "Associate Professor of Computer Vision at MBZUAI. His work spans climate resilience, Earth observation, vision-language models, continual learning, and geospatial AI.",
+    "role_title": "Associate Professor",
+    "institution": "MBZUAI",
+    "bio": "Associate Professor of Computer Vision at MBZUAI working on geospatial AI, climate resilience, and practical vision-language systems.",
     "photo": "/static/images/salman_khan.jpeg"
   },
   {
     "name": "Lily Burns",
-    "role": "Senior Advisor, Undergraduate Program",
-    "bio": "Senior Advisor for the Undergraduate Program at MBZUAI with deep experience in higher education operations, security, policy, and international partnerships.",
+    "role_title": "Sr. Advisor",
+    "institution": "MBZUAI",
+    "bio": "Sr. Advisor at MBZUAI supporting undergraduate programs, student experience, campus partnerships, and policy coordination.",
     "photo": "/static/images/lily_burns.jpeg"
   },
   {
     "name": "Mohammed Irfan",
-    "role": "PhD Student, MBZUAI",
-    "bio": "PhD student focused on personalized AI and wearable technologies, with an interest in making AI feel creative, human-centered, and useful in daily life.",
+    "role_title": "PhD Student",
+    "institution": "MBZUAI",
+    "bio": "PhD student focused on personalized AI and wearables, building creative systems that stay human-centered and useful in daily life.",
     "photo": "/static/images/mohammed_irfan.jpeg"
   },
   {
     "name": "Akbobek Abilkaiyrkyzy",
-    "role": "Project Manager, MBZUAI",
-    "bio": "Project Manager leading AI and climate initiatives at MBZUAI, with a multidisciplinary background across machine learning, logistics, energy transition, and industrial automation.",
+    "role_title": "Project Manager",
+    "institution": "MBZUAI",
+    "bio": "Project manager leading AI and climate initiatives at MBZUAI, with experience across machine learning, logistics, and energy transition.",
     "photo": "/static/images/akbobek_abilkaiyrkyzy.jpeg"
   },
   {
     "name": "Bilal Ashfaq",
-    "role": "MSc Student, MBZUAI",
-    "bio": "Master's student in Statistics and Data Science researching AI agent security and adaptive defense mechanisms. He brings experience in software engineering, mentorship, and technical instruction.",
+    "role_title": "MSc Student",
+    "institution": "MBZUAI",
+    "bio": "Master's student in Statistics and Data Science researching AI agent security, with experience in software engineering and mentorship.",
     "photo": "/static/images/bilal_ashfaq.jpeg"
   },
   {
-    "name": "Nicolas Mauricio Cuadrado Avila",
-    "role": "PhD Candidate, MBZUAI",
-    "bio": "PhD candidate in Machine Learning whose research includes efficient machine learning, model pruning and compression, reinforcement learning, and AI for sustainable energy systems.",
+    "name": "Nicolas Cuadrado",
+    "role_title": "PhD Candidate",
+    "institution": "MBZUAI",
+    "bio": "PhD candidate in Machine Learning researching efficient models, compression, reinforcement learning, and sustainable energy systems.",
     "photo": "/static/images/nicolas_cuadrado.jpeg"
   },
   {
     "name": "Aya Laajil",
-    "role": "Research Engineer, MBZUAI",
-    "bio": "Research Engineer in the Statistics and Data Science Department working on AI-driven weather forecasting for Africa, with interests in machine learning, probabilistic calibration, and applied statistics.",
+    "role_title": "Research Engineer",
+    "institution": "MBZUAI",
+    "bio": "Research engineer in Statistics and Data Science working on AI-driven weather forecasting for Africa and probabilistic calibration.",
     "photo": "/static/images/aya_laajil.jpeg"
   },
   {
     "name": "Nokhutula Madekufamba",
-    "role": "Master's Student, University of Pretoria",
-    "bio": "Master's student in Big Data Science and Mastercard Foundation Scholar focused on data science, machine learning, and responsible AI for real-world impact.",
+    "role_title": "Master's Student",
+    "institution": "University of Pretoria",
+    "bio": "Master's student in Big Data Science and Mastercard Foundation Scholar focused on data science, machine learning, and responsible AI.",
     "photo": "/static/images/nokhutula_madekufamba.jpeg"
   },
   {
     "name": "Caivil Ndobela",
-    "role": "Bioinformatics Scholar",
-    "bio": "Bioinformatics scholar with research, teaching, and mentorship experience across Southern Africa. He has supported research methodology, data analysis, and technical training for postgraduate students.",
+    "role_title": "Bioinformatics Scholar",
+    "institution": "University of Pretoria",
+    "bio": "Bioinformatics scholar with research, teaching, and mentorship experience across Southern Africa and postgraduate training support.",
     "photo": "/static/images/caivil_ndobela.jpeg"
   }
 ]

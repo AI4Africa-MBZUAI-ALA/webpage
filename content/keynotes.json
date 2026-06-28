@@ -14,17 +14,17 @@
     "summary": "On-site keynote on leadership and AI."
   },
   {
-    "name": "Loubna",
-    "day": "Day 8",
-    "date": "Sun 5 Jul",
-    "location": "Auditorium",
-    "summary": "On-site keynote during the second week."
-  },
-  {
     "name": "Catherine Nakalembe",
     "day": "Day 6",
     "date": "Fri 3 Jul",
     "location": "Auditorium",
     "summary": "Virtual keynote in the schedule."
+  },
+  {
+    "name": "Loubna",
+    "day": "Day 8",
+    "date": "Sun 5 Jul",
+    "location": "Auditorium",
+    "summary": "On-site keynote during the second week."
   }
 ]

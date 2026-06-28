@@ -11,14 +11,14 @@
   ],
   "hero": {
     "eyebrow": "Residential bootcamp · Johannesburg, South Africa",
-    "title": "A focused, human-centered introduction to AI for the next generation of African leaders.",
-    "summary": "This site keeps the program story, schedule, announcements, and people in one clear place so mentors and participants can find what they need quickly.",
+    "title": "AI for sustainability and agriculture in Africa, shaped to grow the next generation of leaders.",
+    "summary": "The bootcamp connects responsible AI with sustainability and agriculture challenges in Africa so participants learn to build practical solutions and lead with impact.",
     "image": "/static/images/hero-ai-sustainability-agriculture.png",
     "image_alt": "Illustration of AI supporting sustainable agriculture",
     "ctas": [
       { "label": "View program", "href": "#program", "emphasis": true },
       { "label": "Latest updates", "href": "#announcements" },
-      { "label": "Open program portal", "href": "https://program.ai4africamp.com", "target": "_blank" }
+      { "label": "Open program portal", "href": "https://program.ai4africamp.com", "target": "_blank", "icon": "computer" }
     ]
   },
   "facts": [

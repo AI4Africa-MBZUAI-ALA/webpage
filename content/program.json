@@ -389,7 +389,7 @@
         {
           "start": "13:00",
           "end": "15:00",
-          "title": "Can You Spot the Pattern?",
+          "title": "Discover Your Data",
           "location": "Classrooms",
           "category": "ideation"
         },
@@ -941,7 +941,7 @@
         {
           "start": "15:30",
           "end": "17:00",
-          "title": "AI for Our Planet I",
+          "title": "AI for Global Impact I",
           "location": "Build Lab",
           "category": "build"
         },
@@ -1052,7 +1052,7 @@
         {
           "start": "15:30",
           "end": "17:00",
-          "title": "AI for Our Planet II",
+          "title": "AI for Global Impact II",
           "location": "Build Lab",
           "category": "build"
         },
@@ -1156,7 +1156,7 @@
         {
           "start": "15:30",
           "end": "17:00",
-          "title": "AI for Our Planet III",
+          "title": "AI for Global Impact III",
           "location": "Build Lab",
           "category": "build"
         },

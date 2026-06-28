@@ -309,6 +309,17 @@ button {
   font-weight: 600;
 }
 
+.button-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .button:hover {
   transform: translateY(-1px);
 }
@@ -793,11 +804,24 @@ button {
 }
 
 .person-body .role {
+  display: grid;
+  gap: 0.08rem;
+  justify-items: center;
   color: var(--green);
+  line-height: 1.1;
+}
+
+.role-title {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-size: 0.75rem;
   font-weight: 600;
+}
+
+.role-org {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--green-dark);
 }
 
 .person-body h3 {
