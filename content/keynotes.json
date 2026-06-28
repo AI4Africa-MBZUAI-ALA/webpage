@@ -1,30 +1,42 @@
 [
   {
     "name": "Rendani Mbuvha",
+    "affiliation": "UNU-INWEH · Queen Mary University of London",
+    "bio": "Research Fellow in Artificial Intelligence and Applied Statistics at UNU-INWEH, building machine-learning tools to understand climate risk, floods, heatwaves, and drought.",
+    "image": "/static/images/rendani_mbuvha.png",
+    "image_alt": "Portrait of Rendani Mbuvha",
     "day": "Day 2",
     "date": "Mon 29 Jun",
-    "location": "Auditorium",
-    "summary": "On-site opening keynote in the timetable."
+    "location": "Auditorium"
   },
   {
     "name": "Vukosi Marivate",
+    "affiliation": "University of Pretoria · ABSA UP Chair of Data Science",
+    "bio": "Professor of Computer Science at the University of Pretoria, focused on machine learning, NLP, and African language technologies that support social impact.",
+    "image": "/static/images/vukosi_marivate.jpg",
+    "image_alt": "Portrait of Vukosi Marivate",
     "day": "Day 3",
     "date": "Tue 30 Jun",
-    "location": "Auditorium",
-    "summary": "On-site keynote on leadership and AI."
+    "location": "Auditorium"
   },
   {
     "name": "Catherine Nakalembe",
+    "affiliation": "University of Maryland · NASA Harvest",
+    "bio": "Assistant professor and Africa Program Director at NASA Harvest, using satellite data and AI to strengthen food security and agricultural decision-making.",
+    "image": "/static/images/catherine_nakalembe.jpg",
+    "image_alt": "Portrait of Catherine Nakalembe",
     "day": "Day 6",
     "date": "Fri 3 Jul",
-    "location": "Auditorium",
-    "summary": "Virtual keynote in the schedule."
+    "location": "Auditorium"
   },
   {
-    "name": "Loubna",
+    "name": "Loubna Benabbou",
+    "affiliation": "GERAD",
+    "bio": "Researcher in optimization and machine learning whose work spans decision systems, rule extraction, and data-driven methods for complex scheduling problems.",
+    "image": "/static/images/loubna_benabbou.jpeg",
+    "image_alt": "Portrait of Loubna Benabbou",
     "day": "Day 8",
     "date": "Sun 5 Jul",
-    "location": "Auditorium",
-    "summary": "On-site keynote during the second week."
+    "location": "Auditorium"
   }
 ]

@@ -128,13 +128,19 @@ def render_keynotes() -> str:
     cards = "".join(
         f"""
       <article class="card keynote-card">
-        <div class="keynote-meta">
-          <span>{escape(item['day'])}</span>
-          <span>{escape(item['date'])}</span>
+        <div class="keynote-media">
+          <img src="{escape(resolve_asset_path(item.get('image', '/static/images/portrait-placeholder.svg')))}" alt="{escape(item.get('image_alt', item['name']))}" loading="lazy">
         </div>
-        <h3 class="card-title">{escape(item['name'])}</h3>
-        <p class="muted">{escape(item['summary'])}</p>
-        <div class="keynote-location">{escape(item['location'])}</div>
+        <div class="keynote-body">
+          <div class="keynote-meta">
+            <span>{escape(item['day'])}</span>
+            <span>{escape(item['date'])}</span>
+          </div>
+          <h3 class="card-title">{escape(item['name'])}</h3>
+          <div class="keynote-affiliation">{escape(item['affiliation'])}</div>
+          <p class="muted">{escape(item['bio'])}</p>
+          <div class="keynote-location">{escape(item['location'])}</div>
+        </div>
       </article>"""
         for item in keynotes
     )
