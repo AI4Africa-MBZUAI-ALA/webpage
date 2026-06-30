@@ -140,6 +140,7 @@ def render_keynotes() -> str:
             <span>{escape(item['date'])}</span>
           </div>
           <h3 class="card-title">{escape(item['name'])}</h3>
+          {f'<div class="keynote-talk">{escape(item["talk_title"])}</div>' if item.get("talk_title") else ""}
           <div class="keynote-affiliation">{escape(item['affiliation'])}</div>
           <p class="muted">{escape(item['bio'])}</p>
           <div class="keynote-location">{escape(item['location'])}</div>

@@ -457,6 +457,12 @@ button {
   line-height: 1.25;
 }
 
+.keynote-talk {
+  color: var(--ink);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
 .keynote-location {
   margin-top: auto;
   color: var(--green-dark);
