@@ -10,6 +10,7 @@
   const programDays = Array.from(document.querySelectorAll("[data-program-day]"));
   const programBlocks = Array.from(document.querySelectorAll("[data-program-block]"));
   const programScroll = document.querySelector(".program-scroll");
+  let programAutoScrolled = false;
 
   const closeMenu = () => {
     if (!nav || !toggle) return;
@@ -69,7 +70,10 @@
     syncProgramFilters();
   }
 
-  if (programScroll && programDays.length) {
+  const scrollProgramToCurrentDay = () => {
+    if (programAutoScrolled || !programScroll || !programDays.length) return;
+    programAutoScrolled = true;
+
     const today = new Date();
     const todayIso = new Date(
       today.getFullYear(),
@@ -93,7 +97,7 @@
         });
       });
     }
-  }
+  };
 
   document.addEventListener("click", (event) => {
     if (!nav || !toggle) return;
@@ -134,6 +138,9 @@
 
       if (visible && visible.target.id) {
         setActive(visible.target.id);
+        if (visible.target.id === "program") {
+          scrollProgramToCurrentDay();
+        }
       }
     },
     {
