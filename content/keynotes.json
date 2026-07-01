@@ -21,8 +21,9 @@
   },
   {
     "name": "Catherine Nakalembe",
-    "affiliation": "University of Maryland · NASA Harvest",
-    "bio": "Assistant professor and Africa Program Director at NASA Harvest, using satellite data and AI to improve food security and agricultural decisions across Africa.",
+    "affiliation": "University of Maryland · NASA Harvest · The Xylem Institute",
+    "talk_title": "A Journey into Translational GeoAI",
+    "bio": "Assistant professor at the University of Maryland, Africa Director of NASA Harvest, and founder of The Xylem Institute. She builds Translational GeoAI systems that turn satellite data and AI into food-security decisions across Africa.",
     "image": "/static/images/catherine_nakalembe.jpg",
     "image_alt": "Portrait of Catherine Nakalembe",
     "day": "Day 6",

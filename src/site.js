@@ -9,6 +9,7 @@
     : [];
   const programDays = Array.from(document.querySelectorAll("[data-program-day]"));
   const programBlocks = Array.from(document.querySelectorAll("[data-program-block]"));
+  const programScroll = document.querySelector(".program-scroll");
 
   const closeMenu = () => {
     if (!nav || !toggle) return;
@@ -66,6 +67,32 @@
     });
 
     syncProgramFilters();
+  }
+
+  if (programScroll && programDays.length) {
+    const today = new Date();
+    const todayIso = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate()
+    ).toISOString().slice(0, 10);
+    const currentDay =
+      programDays.find((day) => day.dataset.programDate === todayIso) ||
+      programDays.find((day) => {
+        const dayDate = day.dataset.programDate || "";
+        return dayDate > todayIso;
+      }) ||
+      programDays[programDays.length - 1];
+
+    if (currentDay) {
+      requestAnimationFrame(() => {
+        currentDay.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "start",
+        });
+      });
+    }
   }
 
   document.addEventListener("click", (event) => {

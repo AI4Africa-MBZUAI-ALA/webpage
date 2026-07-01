@@ -5,6 +5,7 @@ import html
 import shutil
 import re
 from datetime import date
+from datetime import datetime
 from pathlib import Path
 
 
@@ -14,6 +15,7 @@ SRC_DIR = ROOT / "src"
 STATIC_DIR = ROOT / "static"
 CONTENT_DIR = ROOT / "content"
 ASSET_VERSION = date.today().isoformat()
+EVENT_YEAR = date.today().year
 
 
 def load_json(filename: str):
@@ -32,6 +34,12 @@ organizers = load_json("organizers.json")
 def format_date(value: str) -> str:
     day = date.fromisoformat(value)
     return f"{day.day} {day.strftime('%b %Y')}"
+
+
+def parse_program_date(value: str) -> str:
+    if not value.strip():
+        return ""
+    return datetime.strptime(f"{value} {EVENT_YEAR}", "%a %d %b %Y").date().isoformat()
 
 
 def escape(value: object) -> str:
@@ -203,7 +211,7 @@ def render_program() -> str:
         )
         days.append(
             f"""
-      <article class="card program-day" data-program-day>
+      <article class="card program-day" data-program-day{f' data-program-date="{escape(parse_program_date(item["date"]))}"' if item.get("date", "").strip() else ""}>
         <div class="program-day-head">
           <div>
             <div class="schedule-day-label">{escape(item['day'])}</div>
